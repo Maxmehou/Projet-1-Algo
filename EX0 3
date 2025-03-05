@@ -1,0 +1,25 @@
+VARIABLES
+    a, b, temp, produit, pgcd, ppcm : ENTIER
+
+DEBUT
+    
+    AFFICHER "Entrez le premier nombre :"
+    SAISIR a
+    AFFICHER "Entrez le deuxième nombre :"
+    SAISIR b
+
+    produit ← a * b
+
+    TANT QUE b ≠ 0 FAIRE
+        temp ← b
+        b ← a % b
+        a ← temp
+    FIN TANT QUE
+    pgcd ← a
+
+    
+    ppcm ← produit DIV pgcd
+
+    AFFICHER "Le PGCD de ", a, " et ", b, " est : ", pgcd
+    AFFICHER "Le PPCM de ", a, " et ", b, " est : ", ppcm
+FIN
