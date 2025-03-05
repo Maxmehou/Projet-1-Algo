@@ -1,0 +1,22 @@
+VARIABLES
+    A, B, C, reste : ENTIER
+
+DEBUT
+    AFFICHER "Entrez un nombre :"
+    SAISIR C
+
+    A ← C
+    B ← 0
+
+    TANT QUE C > 0 FAIRE
+        reste ← C % 10  
+        B ← (B * 10) + reste 
+        C ← C DIV 10 
+    FIN TANT QUE
+
+    SI A = B ALORS
+        AFFICHER "Le nombre ", A, " est un palindrome."
+    SINON
+        AFFICHER "Le nombre ", A, " n'est pas un palindrome."
+    FIN SI
+FIN
