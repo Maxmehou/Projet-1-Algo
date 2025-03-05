@@ -1,0 +1,21 @@
+ALGORITHME :Nombres_aléatoires
+
+VARIABLES
+    liste : TABLEAU[1..50] DE ENTIER
+    i : ENTIER
+    N : ENTIER
+
+DEBUT
+    POUR i DE 1 À 50 FAIRE
+        N ← RANDOM(1, 100)
+        liste[i] ← N
+    FIN POUR
+
+    POUR i DE 1 À 50 FAIRE
+        SI liste[i] % 2 = 0 ALORS
+            AFFICHER "Le nombre ", liste[i], " est pair."
+        SINON
+            AFFICHER "Le nombre ", liste[i], " est impair."
+        FIN SI
+    FIN POUR
+FIN
