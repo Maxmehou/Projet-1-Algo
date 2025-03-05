@@ -1,0 +1,48 @@
+VARIABLES
+    file : TABLEAU[1..100] DE ENTIER  
+    A, choix, B, i : ENTIER          
+                        
+
+DEBUT
+    
+    A ← 0
+
+    
+    REPETER
+        
+        AFFICHER "1. Ajouter un client"
+        AFFICHER "2. Afficher la file d'attente"
+        AFFICHER "3. Quitter"
+        AFFICHER "Choisissez une option :"
+        SAISIR choix
+
+        SELON choix FAIRE
+            CAS 1 :
+                SI A < 100 ALORS
+                    AFFICHER "Entrez le numéro du nouveau client :"
+                    SAISIR B
+                    A ← A + 1
+                    file[A] ← B
+                    AFFICHER "Client ajouté à la file."
+                SINON
+                    AFFICHER "La file est pleine, impossible d'ajouter un client."
+                FIN SI
+
+            CAS 2 :  
+                SI A > 0 ALORS
+                    AFFICHER "File d'attente actuelle :"
+                    POUR i DE 1 À A FAIRE
+                        AFFICHER "Client ", i, " : ", file[i]
+                    FIN POUR
+                SINON
+                    AFFICHER "La file est vide."
+                FIN SI
+
+            CAS 3 :  
+                AFFICHER "Fin du programme."
+
+            AUTRE :
+                AFFICHER "Option invalide. Veuillez choisir une option valide."
+        FIN SELON
+    JUSQU'A choix = 3
+FIN
