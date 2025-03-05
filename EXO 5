@@ -1,0 +1,36 @@
+
+VARIABLES
+    A, tentative, B : ENTIER
+    C : BOOLEEN
+
+DEBUT
+    A ← ALEA_ENTIER(1, 100)
+
+    B ← 10
+    C ← FAUX
+
+    
+    TANT QUE B > 0 ET NON C FAIRE
+   
+        AFFICHER "Il vous reste ", B, " essais."
+        AFFICHER "Devinez le nombre (entre 1 et 100) :"
+        SAISIR tentative
+
+        SI tentative = A ALORS
+            trouve ← VRAI
+            AFFICHER "Bravo ! Vous avez trouvé le nombre secret : ", A
+        SINON
+            SI tentative < A ALORS
+                AFFICHER "Trop petit !"
+            SINON
+                AFFICHER "Trop grand !"
+            FIN SI
+            B ← B - 1
+        FIN SI
+    FIN TANT QUE
+
+    
+    SI NON trouve ALORS
+        AFFICHER "Dommage ! Le nombre secret était : ", A
+    FIN SI
+FIN
